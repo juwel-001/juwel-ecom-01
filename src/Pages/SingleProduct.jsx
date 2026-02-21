@@ -66,10 +66,7 @@ function SingleProduct() {
                 <p className='text-gray-600 '>{singleProduct.description}</p>
 
                 {/* Quantity selector */}
-                <div className='flex items-center gap-4 py-6'>
-                  <label htmlFor="" className='text-sm font-medium text-gray-700 '>Quantity: </label>
-                  <input type="number" min={1} value={1} className='w-20 border-gray-300 rounded-lg px-3 py-1 focus:outline-none focus:ring-red-500' />
-                </div>
+                
 
                 <div className='flex-gap-4 mt-4'>
                     <button onClick={()=>addToCart(singleProduct)} className='px-6 flex gap-2 py-2 text-lg bg-red-500 text-white rounded-md'><IoCartOutline className='w-6 h-6'/>Add to Cart</button>
