@@ -49,32 +49,44 @@ function SingleProduct() {
     {
       singleProduct ? (
         <div className='px-4 pb-4 md:px-0'>
-          <Bredcrums title={singleProduct.title} />
-          <div className='max-w-6xl mx-auto md:p-6 grid grid-cols-1 md:grid-cols-2 gap-10'>
+  <Bredcrums title={singleProduct.title} />
+  <div className='max-w-6xl mx-auto md:p-6 grid grid-cols-1 md:grid-cols-2 gap-10'>
 
-            {/* Product image */}
-            <div className='w-full'>
-              <img src={singleProduct.images} alt={singleProduct.title} className='rounded-2xl w-full   object-cover' />
-            </div>
+    {/* Product image */}
+    <div className='w-full flex justify-center'>
+      <img 
+        src={singleProduct.images} 
+        alt={singleProduct.title} 
+        className='rounded-2xl w-full md:max-w-md object-cover' 
+      />
+    </div>
 
-            {/* Product details */}
-            <div className='flex flex-col gap-10'>
-              <h1 className='md:text-3xl text-xl font-bold text-gray-800'>{singleProduct.title}</h1>
-              <div className='text-gray-700'>
-                {singleProduct.brand?.toUpperCase()}/{singleProduct.category?.toUpperCase()}
-                <p className='text-xl text-red-500 font-bold py-6'>${singleProduct.price} <span className='line-through text-gray-700 mx-2'>{originalPrice}</span> <span className='bg-red-500 px-4 py-2 text-white rounded-full'>{singleProduct.discountPercentage}% discount</span></p>
-                <p className='text-gray-600 '>{singleProduct.description}</p>
+    {/* Product details */}
+    <div className='flex flex-col gap-6'>
+      <h1 className='md:text-3xl text-2xl font-bold text-gray-800'>{singleProduct.title}</h1>
+      <div className='text-gray-700 flex flex-col gap-4'>
+        <span className='uppercase font-semibold text-sm md:text-base'>{singleProduct.brand}/{singleProduct.category}</span>
+        <p className='text-xl md:text-2xl text-red-500 font-bold'>
+          ${singleProduct.price} 
+          <span className='line-through text-gray-700 mx-2 text-base md:text-lg'>{originalPrice}</span>
+          <span className='bg-red-500 px-3 py-1 text-white rounded-full text-sm md:text-base ml-2'>{singleProduct.discountPercentage}% discount</span>
+        </p>
+        <p className='text-gray-600 text-sm md:text-base'>{singleProduct.description}</p>
 
-                {/* Quantity selector */}
-                
-
-                <div className='flex-gap-4 mt-4'>
-                    <button onClick={()=>addToCart(singleProduct)} className='px-6 flex gap-2 py-2 text-lg bg-red-500 text-white rounded-md'><IoCartOutline className='w-6 h-6'/>Add to Cart</button>
-                  </div>
-              </div>
-            </div>
-          </div>
+        {/* Add to Cart button */}
+        <div className='flex gap-4 mt-4'>
+          <button 
+            onClick={()=>addToCart(singleProduct)} 
+            className='px-4 sm:px-6 flex gap-2 py-2 text-base md:text-lg bg-red-500 text-white rounded-md items-center justify-center w-full sm:w-auto'
+          >
+            <IoCartOutline className='w-5 h-5 md:w-6 md:h-6'/> Add to Cart
+          </button>
+        </div>
       </div>
+    </div>
+
+  </div>
+</div>
       ) 
       : 
       (
