@@ -14,9 +14,10 @@ const Footer = () => {
               <h1 className='text-red-500 text-2xl font-bold'>JuweleCom</h1>
             </Link>
             <p className='mt-2 text-sm'>Powering Your World with the Best in Electronics.</p>
-            <p className='mt-2 text-sm'>123 Electronics St, Style City, NY 10001</p>
+            <p className='mt-2 text-sm'>Godagari, Rajshahi, Bangladesh</p>
             <p className='text-sm'>Email: support@juwelecom.com</p>
-            <p className='text-sm'>Phone: (123) 456-7890</p>
+             <p className='text-sm'>Phone: +880 1707350634</p>
+            <p className='text-sm'>Phone: +880 1756265683</p>
         </div>
         {/* customer service link */}
         <div className='mb-6 md:mb-0'>
