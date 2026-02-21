@@ -17,7 +17,7 @@ const Footer = () => {
             <p className='mt-2 text-sm'>Godagari, Rajshahi, Bangladesh</p>
             <p className='text-sm'>Email: support@juwelecom.com</p>
              <p className='text-sm'>Phone: +880 1707350634</p>
-            <p className='text-sm'>Phone: +880 1756265683</p>
+             <p className='text-sm'>Phone: +880 1756265683</p>
         </div>
         {/* customer service link */}
         <div className='mb-6 md:mb-0'>
