@@ -7,8 +7,8 @@ function ProductListView({ product }) {
   const navigate = useNavigate();
   const { addToCart } = useCart();
   return (
-    <div className="space-y-4  rounded-md">
-      <div className="bg-gray-100 flex gap-7 items-center p-2 rounded-md">
+    <div className="space-y-4  rounded-md w-full">
+      <div className="bg-gray-100 flex flex-col md:flex-row gap-7 items-center p-2 rounded-md w-full">
         <img
           src={product.images}
           alt={product.title}

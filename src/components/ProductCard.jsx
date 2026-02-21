@@ -12,7 +12,7 @@ function ProductCard({ product }) {
   return (
     <div
       className="border relative border-gray-100 rounded-2xl cursor-pointer 
-      hover:scale-105 hover:shadow-2xl transition-all p-2 flex flex-col justify-between h-full"
+      hover:scale-105 hover:shadow-2xl transition-all p-2 flex flex-col justify-between h-full w-full"
     >
       <img
         src={product.images}
@@ -28,10 +28,9 @@ function ProductCard({ product }) {
           console.log(product); // শুধু এই product
           addToCart(product);
         }}
-        className="bg-red-500 px-3 py-2 text-lg rounded-md w-full cursor-pointer 
-        flex justify-center items-center text-white gap-2 font-semibold"
+        className="px-2 sm:px-3 md:px-5 py-1 text-sm sm:text-base md:text-lg bg-red-500 text-white rounded-md flex items-center justify-center gap-2 w-full"
       >
-        <IoCarOutline className="w-6 h-6" /> Add to Cart
+        <IoCarOutline className="w-5 h-5 sm:w-6 sm:h-6" /> Add to Cart
       </button>
     </div>
   );

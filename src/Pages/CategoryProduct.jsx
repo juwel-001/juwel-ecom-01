@@ -42,7 +42,11 @@ function CategoryProduct() {
 
                 {
                     searchData.map((product, index)=>{
-                        return <ProductListView key={index} product={product} />
+                        return(
+                            <div className="max-w-7xl mx-auto px-4 mt-5">
+                                <ProductListView key={index} product={product} />
+                            </div>
+                        )
 
                     })
                 }
