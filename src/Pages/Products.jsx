@@ -3,7 +3,7 @@ import { useData } from "../Context/DataContext";
 import Loading from "../assets/Loading4.webm";
 import FilterSection from "../components/FilterSection";
 import ProductCard from "../components/ProductCard";
-import Pagination from "../components/pagination";
+import Pagination from "../components/Pagination";
 import Lottie from "lottie-react";
 import notfound from "../assets/notfound.json";
 import MobileFilter from "../components/MobileFilter";
